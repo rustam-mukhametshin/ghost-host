@@ -1,2 +1,38 @@
 @import "partials/params";
 @import "partials/mixins";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$color: red;
+
+html, body {
+  @include clear;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  @include clear
+}
+
+a {
+  text-decoration: none;
+}
+
+.view-port {
+  max-width: $view-port;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+}
+
+.first-screen {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100vh;
+}
