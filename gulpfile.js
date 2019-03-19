@@ -26,8 +26,8 @@ gulp.task('scss', function () {
         .pipe(sass())
         .pipe(concat(config.output.cssName))
         .pipe(autoPrefix('last 2 versions'))
+        .pipe(prodOrDev(!config.isDevelop, cleanCss()))
         .pipe(prodOrDev(config.isDevelop, sourceMap.write()))
-        .pipe(prodOrDev(config.isDevelop, cleanCss()))
         .pipe(gulp.dest(config.output.path))
         .pipe(browserSync.stream())
         ;
