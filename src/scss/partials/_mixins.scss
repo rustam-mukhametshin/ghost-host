@@ -7,3 +7,10 @@
   @include clear;
   list-style: none;
 }
+
+@mixin flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
