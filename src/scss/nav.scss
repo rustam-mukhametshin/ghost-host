@@ -16,7 +16,9 @@ $font-color: #fff;
   color: $font-color;
   background: transparent;
   &__brand {
-
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 20px;
   }
   &__menu {
     @include clear-list;
