@@ -17,5 +17,8 @@
     "gulp-if": "^2.0.2",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0"
   }
 }
