@@ -1,0 +1,113 @@
+@import "partials/params";
+@import "partials/mixins";
+
+$border-color: $buy-border-color;
+
+.package {
+  background: #ffffff;
+
+  &__img {
+
+  }
+  &__tiles {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -300px;
+    margin-bottom: 80px;
+    height: 600px;
+  }
+  &__tile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+
+    &:before {
+      position: absolute;
+      display: block;
+      content: '';
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 3px;
+    }
+    &--yellow {
+      @include package-color($yellow);
+      &:before {
+        background-color: $yellow;
+      }
+    }
+    &--gray {
+      @include package-color($grey);
+      &:before {
+        background-color: $grey;
+      }
+    }
+    &--red {
+      @include package-color($red);
+      &:before {
+        background-color: $red;
+      }
+    }
+    &--green {
+      @include package-color($green);
+      &:before {
+        background-color: $green;
+      }
+    }
+
+    & .tile__img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin: 15px auto;
+    }
+    & .tile__title {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    & .tile__list {
+      @include clear-list;
+      padding: 20px 0;
+      border-top: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+    }
+    & .tile__item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      & .item__key {
+        color: #d9d9d9;
+      }
+      & .item__value {
+      }
+    }
+    & .tile__footer {
+      @include flex-center;
+      flex-grow: 1;
+    }
+    & .tile__cost {
+      padding: 5px;
+      margin-bottom: 10px;
+      border-bottom: 3px solid;
+      & .cost__price {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      & .cost__date {
+        font-size: 10px;
+        color: #d9d9d9;
+      }
+    }
+    & .tile__plan {
+      text-transform: uppercase;
+    }
+  }
+  &__border {
+    border-bottom: 3px dotted $border-color;
+  }
+}
