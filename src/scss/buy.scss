@@ -60,4 +60,41 @@ $opacity: .6;
     justify-content: flex-end;
   }
 
+  &__table {
+    width: 800px;
+    font-size: 13px;
+    opacity: $opacity - 0.2;
+    & .table__row {
+      display: flex;
+    }
+    & .table__cell {
+      @include flex-center(row);
+      padding: 30px 50px;
+      width: 25%;
+      position: relative;
+      &--top {
+        border-bottom: 1px solid $buy-border-color;
+        border-right: 1px solid $buy-border-color;
+      }
+      &--bottom {
+        border-right: 1px solid $buy-border-color;
+      }
+      &--top, &--bottom {
+        &:last-child {
+          border-right: none;
+        }
+      }
+      &:after {
+        position: absolute;
+        display: block;
+        content: '';
+        height: 10px;
+        width: 10px;
+        right: -5px;
+        bottom: -5px;
+        background-color: white;
+        z-index: 99999;
+      }
+    }
+  }
 }
