@@ -4,19 +4,17 @@
 $font-color: #fff;
 
 .nav {
-  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex: 0 0 $nav-height;
-  padding: 0 30px;
   color: $font-color;
   background: transparent;
+  height: $nav-height;
   &__brand {
-    margin-left: 20px;
+    margin-left: 40px;
     font-weight: bold;
     font-size: 20px;
   }
