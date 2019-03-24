@@ -1,0 +1,63 @@
+@import "partials/params";
+@import "partials/mixins";
+
+$opacity: .6;
+
+.buy {
+  background: #ffffff;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+  }
+  &__title {
+    font-size: 25px;
+    opacity: .8;
+    font-weight: bold;
+    margin-bottom: 25px;
+  }
+  &__subtitle {
+    opacity: $opacity;
+    margin-bottom: 50px;
+    font-weight: normal;
+  }
+  &__input-wrapper {
+    display: flex;
+    width: 1000px;
+    margin: 0 auto 50px;
+    padding: 5px;
+    border: 1px solid $buy-border-color;
+  }
+  &__www {
+    justify-content: center;
+  }
+  &__help {
+    display: flex;
+    align-items: center;
+    width: 10%;
+    opacity: $opacity - 0.2;
+  }
+  &__input-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    border-right: 1px solid $buy-border-color;
+    border-left: 1px solid $buy-border-color;
+  }
+  &__input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+  }
+  &__domain {
+    margin-right: 50px;
+    opacity: $opacity - 0.2;
+  }
+  &__select {
+    justify-content: flex-end;
+  }
+
+}
