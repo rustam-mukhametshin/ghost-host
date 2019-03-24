@@ -8,9 +8,9 @@
   list-style: none;
 }
 
-@mixin flex-center {
+@mixin flex-center( $dir: column ) {
   display: flex;
-  flex-direction: column;
+  flex-direction: $dir;
   justify-content: center;
   align-items: center;
 }
