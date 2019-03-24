@@ -1,0 +1,46 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.slider {
+  @include flex-center;
+  height: 190px;
+  background: url('img/comment_bg.jpg') no-repeat;
+  background-size: cover;
+  color: #fff;
+  &__slide {
+    @include flex-center;
+    opacity: 1;
+    transition: .5s opacity;
+  }
+  &__quote {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-style: italic;
+    text-align: center;
+  }
+  &__info {
+    display: flex;
+  }
+  &__name {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  &__icons {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 20px;
+  }
+  &__icon {
+    position: relative;
+    width: 7px;
+    height: 7px;
+    top: 1px;
+    border-radius: 50%;
+    border: 1px solid white;
+    cursor: pointer;
+    margin: 2px 10px;
+    &--active {
+      background-color: #fff;
+    }
+  }
+}
